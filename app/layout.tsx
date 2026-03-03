@@ -18,13 +18,7 @@ export const metadata: Metadata = {
       "Ethical hacker, tinkerer, and builder.",
     url: "https://ryankmills.com",
     siteName: "ryankmills.com",
-    images: [
-      {
-        url: "https://chronark.com/og.png",
-        width: 1920,
-        height: 1080,
-      },
-    ],
+    
     locale: "en-US",
     type: "website",
   },
@@ -39,10 +33,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
-  },
+  
   icons: {
     shortcut: "/favicon.png",
   },
