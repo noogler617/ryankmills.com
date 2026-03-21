@@ -2,23 +2,42 @@ import "../global.css";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
-//import { Analytics } from "./components/analytics";
-//import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
-    default: "ryankmills.com",
-    template: "%s | ryankmills.com",
+    default: "Ryan Mills",
+    template: "%s | Ryan Mills",
   },
-  description: "Ethical hacker, tinkerer, and builder.",
+  description:
+    "Ryan Mills — ethical hacker, tinkerer, and builder. Exploring cybersecurity, hands-on projects, and creative tech solutions.",
+  keywords: [
+    "Ryan Mills",
+    "ethical hacker",
+    "cybersecurity",
+    "penetration testing",
+    "infosec",
+    "tinkerer",
+    "developer",
+    "ryankmills.com",
+  ],
+  authors: [{ name: "Ryan Mills", url: "https://ryankmills.com" }],
+  creator: "Ryan Mills",
+  metadataBase: new URL("https://ryankmills.com"),
   openGraph: {
-    title: "ryankmills.com",
+    title: "Ryan Mills",
     description:
-      "Ethical hacker, tinkerer, and builder.",
+      "Ethical hacker, tinkerer, and builder. Exploring cybersecurity, hands-on projects, and creative tech solutions.",
     url: "https://ryankmills.com",
-    siteName: "ryankmills.com",
-    
+    siteName: "Ryan Mills",
+    images: [
+      {
+        url: "/og.png",
+        width: 1920,
+        height: 1080,
+        alt: "Ryan Mills — ryankmills.com",
+      },
+    ],
     locale: "en-US",
     type: "website",
   },
@@ -33,11 +52,20 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  
+  twitter: {
+    title: "Ryan Mills",
+    card: "summary_large_image",
+    description:
+      "Ethical hacker, tinkerer, and builder.",
+  },
   icons: {
     shortcut: "/favicon.png",
   },
+  alternates: {
+    canonical: "https://ryankmills.com",
+  },
 };
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -55,12 +83,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head>
-        
-      </head>
+      <head />
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         {children}
         <Script
