@@ -1,6 +1,7 @@
 import { Navigation } from "../components/nav";
 
 const videos = [
+  { id: "yzzvHq4B3wU", title: "Open Auto Pro w/Raspberry Pi4 inside 04 Pontiac Grand Prix" },
   { id: "ftWRtShSUs0", title: "Scourge Middle East" },
   { id: "NsUgB16nKD0", title: "Scourge Live NH PT1" },
   { id: "oeZR3yEzc4Q", title: "Scourge Live NH PT2" },
